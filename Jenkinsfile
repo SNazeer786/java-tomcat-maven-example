@@ -9,7 +9,7 @@ pipeline{
 			choices: ['project-a', 'project-b'],
 			name: "project"
 		)
-    	}
+	])
 	stages {
         stage('Initialize'){
             steps{
