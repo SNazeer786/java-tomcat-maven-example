@@ -4,12 +4,14 @@ pipeline{
 	tools {
 		maven 'maven'
 	}
-    	parameters([
-		choice(
-			choices: ['project-a', 'project-b'],
-			name: "project"
-		)
-	])
+	script {
+    		parameters([
+			choice(
+				choices: ['project-a', 'project-b'],
+				name: "project"
+			)
+		])
+	}
 	stages {
         stage('Initialize'){
             steps{
